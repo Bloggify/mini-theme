@@ -42,7 +42,7 @@ function readAndRenderSync (path) {
     );
 }
 
-// Create the template object
+// Create the theme object
 var Template = module.exports = {
     header: readAndRenderSync(__dirname + "/header.html")
   , footer: readAndRenderSync(__dirname + "/footer.html")
