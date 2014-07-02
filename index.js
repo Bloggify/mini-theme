@@ -43,7 +43,7 @@ function readAndRenderSync (path) {
 }
 
 // Create the theme object
-var Template = module.exports = {
+var Theme = module.exports = {
     header: readAndRenderSync(__dirname + "/header.html")
   , footer: readAndRenderSync(__dirname + "/footer.html")
   , single: {
@@ -60,11 +60,11 @@ var Template = module.exports = {
 const DATA_OBJECT = {
     config: Config
   , blocks: {
-        header: Template.header
-      , footer: Template.footer
+        header: Theme.header
+      , footer: Theme.footer
     }
 };
 
 // Render Mustache elements
-Template.single.page = Mustache.render(Template.single.page, DATA_OBJECT);
-Template.single.post = Mustache.render(Template.single.post, DATA_OBJECT);
+Theme.single.page = Mustache.render(Theme.single.page, DATA_OBJECT);
+Theme.single.post = Mustache.render(Theme.single.post, DATA_OBJECT);
