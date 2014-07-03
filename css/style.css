@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
-    color: #000000;
+    color: rgb(44, 62, 80);
 }
 
 p {
@@ -78,10 +78,15 @@ h1.social {
 }
 
 .header h2,
-.post .post-bottom {
+.post .post-bottom,
+.post .post-top {
     color: #939393;
     font-size: .8em;
     font-weight: 900;
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+.post .post-info {
     text-transform: uppercase;
 }
 
@@ -136,7 +141,7 @@ div.post a.post-title h1 {
 }
 div.post {
     padding-bottom: 1em;
-    margin: 0 auto 4em auto;
+    margin: 4em auto 5em auto;
     max-width: 750px;
     position: relative;
 }
@@ -164,7 +169,6 @@ div.post-bottom-shadow {
 
 div.post-bottom {
     position: absolute;
-    font-family: 'Open Sans', 'sans-serif';
 }
 
 .content {
@@ -381,4 +385,3 @@ hr {
 
 /* Landscape phones and down */
 @media (max-width: 480px) { }
-

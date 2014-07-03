@@ -1,21 +1,25 @@
-<div class='post'>
+<div class='post{{#tags}} tag={{.}}{{/tags}}'>
     <div class="post-top">
+        <div class="post-info">
         <span class='date'>{{date}}</span>
-        by {{by}}
-        <span class="tags">
-            {{#tags}}
-                <span>{{.}}</span>
-            {{/tags}}
-        </span>
+            by {{by}}
+            <span class="tags">
+                {{#tags}}
+                    | <span>{{.}}</span>
+                {{/tags}}
+            </span>
+        </div>
+        <h1>
+            <a href='{{url}}' class="post-title" title="{{title}}">
+                {{title}}
+            </a>
+        </h1>
     </div>
-    <a href='{{url}}' class="post-title">
-        <h1>{{title}}</h1>
-    </a>
     <div class='post-content'>
         {{{content}}}
     </div>
     <div class='post-bottom-shadow'></div>
     <div class='post-bottom'>
-        <a href='{{url}}'>Read more »</a>
+        <!--        <a href='{{url}}' title="{{title}}">Read more »</a> -->
     </div>
 </div>
