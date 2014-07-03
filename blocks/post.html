@@ -1,4 +1,13 @@
 <div class='post'>
+    <div class="post-top">
+        <span class='date'>{{date}}</span>
+        by {{by}}
+        <span class="tags">
+            {{#tags}}
+                <span>{{.}}</span>
+            {{/tags}}
+        </span>
+    </div>
     <a href='{{url}}' class="post-title">
         <h1>{{title}}</h1>
     </a>
@@ -7,9 +16,6 @@
     </div>
     <div class='post-bottom-shadow'></div>
     <div class='post-bottom'>
-        <span class='date'>{{date}}</span>
-        | <a href='{{url}}'>
-         Read more »
-        </a>
+        <a href='{{url}}'>Read more »</a>
     </div>
 </div>

@@ -78,7 +78,7 @@ h1.social {
 }
 
 .header h2,
-.post .post-bottom span.date {
+.post .post-bottom {
     color: #939393;
     font-size: .8em;
     font-weight: 900;
