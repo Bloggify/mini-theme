@@ -52,6 +52,50 @@ input[name="tags"] {
     outline: none;
 }
 
+/* admin dashboard */
+body {
+    color: white;
+}
+div.left {
+    background: #444;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 85%;
+    bottom: 0;
+}
+div.right {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #4E4E4E;
+    left: 15%;
+    bottom: 0;
+    padding: 10px;
+}
+
+div.content {
+    width: 100%;
+    max-width: 690px;
+    margin: 20px auto;
+    border: 2px solid #444;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+ul.admin-items li {
+    background: rgb(73, 73, 73);
+    list-style: none;
+    width: 100%;
+    padding: 8px;
+    border-bottom: 2px solid rgb(60, 60, 60);
+}
+ul.admin-items {
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+
 /* Night theme */
 body.night-theme {
     background: #444;

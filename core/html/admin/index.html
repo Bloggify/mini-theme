@@ -1,17 +1,39 @@
-<h1>Admin Area</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="{{{config.site.paths.theme}}}/css/admin.css">
+    </head>
+    <body>
+        <div class="left">
+            <ul class="admin-items">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h1>Admin Area</h1>
 
-<h2>Reinit cache</h2>
-<p>After adding a page, user, blog post etc, you need to reinit the cache. Killing the process is not required because there is a built-in API.</p>
+                <h2>Reinit cache</h2>
+                <p>After adding a page, user, blog post etc, you need to reinit the cache. Killing the process is not required because there is a built-in API.</p>
 
-<form method="POST">
-    <input type="hidden" name="formId" value="reinitCache">
-    <button type="submit" class="btn">Reinit cache</button>
-</form>
+                <form method="POST">
+                    <input type="hidden" name="formId" value="reinitCache">
+                    <button type="submit" class="btn">Reinit cache</button>
+                </form>
 
-<h2>Export as pure HTML, CSS & JS</h2>
-<p>You can export your website keeping the same urls by clicking the button below:</p>
+                <h2>Export as pure HTML, CSS & JS</h2>
+                <p>You can export your website keeping the same urls by clicking the button below:</p>
 
-<form method="POST">
-    <input type="hidden" name="formId" value="exportAsHtml">
-    <button type="submit" class="btn">Export</button>
-</form>
+                <form method="POST">
+                    <input type="hidden" name="formId" value="exportAsHtml">
+                    <button type="submit" class="btn">Export</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
