@@ -1,6 +1,6 @@
 /* fonts and tomorrow theme */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 @import url("./tomorrow.css");
 @import url("http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
@@ -14,12 +14,13 @@ body {
 }
 
 a {
-    color: #d35400;
+    color: #2980b9;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    color: #e67e22;
+    color: #3498db;
 }
 
 .text-center {
@@ -121,7 +122,7 @@ div.top-header {
     margin: 0 0 3.631em;
     padding: 0.5em 2.618em;
     color: #fff;
-    background: #d35400;
+    background: #2980b9;
     opacity: 0.97;
     filter: alpha(opacity=@opacity * 100);
     -webkit-transition: all ease-in-out 0.2s;
@@ -133,7 +134,7 @@ div.top-header {
 
 /* instant click */
 .instantclick-bar {
-    background: rgb(170, 88, 0) !important;
+    background: #2980b9 !important;
 }
 
 /* posts */
@@ -174,7 +175,7 @@ div.post-bottom {
 
 .content {
     padding-bottom: 8px;
-    font-family: 'Cardo', serif;
+    font-family: 'Roboto', serif;
 }
 
 .content.single-post {
@@ -221,7 +222,7 @@ p.blog-feedback-description {
 .contact-form input,
 .contact-form textarea,
 p {
-    font-family: 'Cardo', serif;
+    font-family: 'Roboto', serif;
     font-size: 20px;
 }
 
@@ -239,7 +240,7 @@ li.page {
 }
 
 li.page.current-page a {
-    color: #FF771D;
+    color: #3498db;
 }
 
 .page a {
@@ -286,7 +287,7 @@ div.footer {
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 3px solid rgb(170, 88, 0);
+    border: 3px solid #2980b9;
     margin-left: -20px;
 }
 
@@ -326,8 +327,8 @@ div.message-box {
 }
 
 .message-box.success {
-    background: #1abc9c;
-    border-color:  #16a085;
+    background: #3498db;
+    border-color:  #2980b9;
 }
 
 .message-box.error {
@@ -342,7 +343,7 @@ div.message-box {
  *********************/
 /* blockquotes */
 blockquote {
-    border-left: 4px solid #d35400;
+    border-left: 4px solid #2980b9;
     padding: 0 15px;
     color: #777;
     margin: 0;
