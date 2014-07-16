@@ -1,0 +1,24 @@
+{
+  "name": "bloggify-default-theme",
+  "version": "0.1.0",
+  "description": "Default theme for Bloggify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BloggifyThemes/Default.git"
+  },
+  "keywords": [
+    "bloggify",
+    "default",
+    "theme"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BloggifyThemes/Default/issues"
+  },
+  "homepage": "https://github.com/BloggifyThemes/Default"
+}
