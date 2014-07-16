@@ -1,6 +1,6 @@
 /* fonts and tomorrow theme */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext);
 @import url("./tomorrow.css");
 @import url("http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
@@ -316,14 +316,10 @@ div.footer {
 
 div.message-box {
     padding: 12px;
-    border-bottom: 6px solid;
-    border-radius: 4px;
-    color: #ecf0f1;
-    font-weight: bold;
-    font-family: sans-serif;
+    border-bottom: 4px solid;
+    color: white;
+    font-family: "Roboto";
     text-align: center;
-    text-shadow: 1px 1px 0 #34495e;
-    font-size: 1.7em;
 }
 
 .message-box.success {
