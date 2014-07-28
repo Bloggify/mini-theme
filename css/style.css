@@ -354,7 +354,7 @@ hr {
     margin: 15px 0;
 }
 
-p > code {
+p code {
     margin: 0;
     border: 1px solid #ddd;
     background-color: #f8f8f8;
