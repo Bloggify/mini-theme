@@ -187,13 +187,25 @@ div.post-bottom {
     max-width: 740px;
 }
 
+p.post-tags,
 p.post-date {
     font-family: "Open Sans", sans-serif;
     font-size: .8em;
-    font-weight: bold;
     color: #939393;
     text-transform: uppercase;
-    margin: 0 0 3em 0;
+    margin: 0;
+}
+
+p.post-tags span.tag:last-of-type > span.separator {
+    display: none;
+}
+
+p.post-tags span.separator:after {
+    content: ", ";
+}
+
+.single-post .markdown {
+   margin: 3em 0 0 0;
 }
 
 h1.post-title {
