@@ -20,6 +20,11 @@ a {
     color: #2980b9;
     text-decoration: none;
     font-weight: bold;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -128,11 +133,6 @@ div.top-header {
     background: #2980b9;
     opacity: 0.97;
     filter: alpha(opacity=@opacity * 100);
-    -webkit-transition: all ease-in-out 0.2s;
-    -moz-transition: all ease-in-out 0.2s;
-    -ms-transition: all ease-in-out 0.2s;
-    -o-transition: all ease-in-out 0.2s;
-    transition: all ease-in-out 0.2s;
     z-index: 9999;
 }
 
