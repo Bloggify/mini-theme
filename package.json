@@ -1,6 +1,6 @@
 {
   "name": "bloggify-default-theme",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Default theme for Bloggify",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/BloggifyThemes/Default/issues"
   },
-  "homepage": "https://github.com/BloggifyThemes/Default"
+  "homepage": "https://github.com/BloggifyThemes/Default",
+  "bloggify": {
+    "errors": {
+      "403": "/errors/403.html",
+      "404": "/errors/404.html",
+      "500": "/errors/500.html"
+    },
+    "main": "index.jade"
+  }
 }
