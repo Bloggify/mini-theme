@@ -56,10 +56,16 @@ html(lang="en")
           div.post-bottom-shadow
           div.post-bottom
           - }
+        div.pagination
+        - if (data.page.previous) {
+            a.page.prev(href=config.blog.path + '/page/' + data.page.previous) « Previous page
+        - }
+        - if (data.page.next) {
+            a.page.prev(href=config.blog.path + '/page/' + data.page.next) Next page »
+        - }
         - } else {
         div.content= data.page.content
-        }
-      - } else {
+        - } else {
         div.top-header
           a(href=config.blog.path)
             img.rounded(src="/images/me-s.png")
