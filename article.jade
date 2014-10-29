@@ -1,0 +1,31 @@
+.top-header
+  a(href=config.blog.path)
+    img.rounded(src="/images/me-s.png")
+    h1= config.site.title
+
+.container
+  .content.single-post
+    h1.post-title= data.post.title
+    p.post-date
+      i.fa.fa-calendar Posted on #{data.post.date} by
+      a(href="/")= data.post.by
+      - if (data.post.tags.length) {
+        p.post-tags
+          i.fa.fa-tags
+          | Tagged as:
+          - for (var i in data.post.tags) {
+          -   var cTag = data.post.tags[i];
+          span.tag= cTag
+          span.separator
+          - }
+      - }
+      div.markdown !{data.post.content}
+      div.blog-feedback
+        p.blog-feedback-header Have feedback on this post? Let
+          a(href='https://twitter.com/intent/tweet?text=@' + config.options.social + '%20&amp;related=' + config.options.social + '&url=' + data.post.fullUrl + ' target="blank">@' + config.options.social)
+          know on Twitter.
+        p.blog-feedback-description
+          Have any questions or suggestions?
+          a(href="/contact") Contact me
+          Found a bug?
+          a(href="https://github.com/Bloggify/Bloggify/issues/new") Report it now

@@ -1,112 +1,39 @@
+- config = config || {};
+- config.options = config.options || {};
+- config.options.customJS = config.customJS || [];
+- config.options.customCSS = config.customCSS || [];
+- config.analytics = {};
+- config.blog = config.blog || {};
+- config.site = config.site || {};
+- config.user = config.user || {};
+
+- data = data || {};
+- data.post = data.post || {};
+- data.post.tags = data.post.tags || [];
+
+- data.menu = data.menu || {};
+- data.menu.active = data.menu.active || {};
+- data.menu.pages = data.menu.pages || [];
+
+- data.posts = data.posts || [{ tags: ["tag1", "tag2"] }];
+- data.page = data.page || {};
+
+- type = "page";
+
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width,initial-scale=1.0")
-    link(rel="stylesheet", href=config.theme + "/css/style.css")
-    link(rel="icon", href="/favicon.ico")
-    title= data.title
-    script(config.theme + "/lib/instantclick.js")
-    script(config.theme + "/lib/xhr-form-submitter.min.js")
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{{config.analytics.id}}}', '{{{config.analytics.url}}}');
-      ga('send', 'pageview');
-    - for (var i = 0; i < config.options.customJS.length; ++i) {
-        script(src=config.options.customJS[i])
-    - }
-    - for (var i = 0; i < config.options.customCSS.length; ++i) {
-            link(rel="stylesheet", href=config.options.customCSS[i])
-    - }
+  include head.jade
   body
-    div.container
-      - if (pageType !== "article") {
-        div.header
-          div.text-center
-            img(src="/images/logo.png").rounded
-            h1= config.site.title
-            h1= config.site.description
-        ul.pages.text-center
-            - for (var i in data.menu.pages) {
-            -   var cPage = data.menu.pages[i];
-            -   var classes = "page" + (cPage.label === data.menu.active.label ? " active" : "");
-            li(class=classes)
-                a(href=cPage.url)= cPage.label
-            - }
-        - if (pageType === "blog") {
-        div.content
-          - for (var i in data.posts) {
-          -  var cPost = data.posts[i];
-          -  var tags = (cPost.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
-          div(class='post ' + tags)
-            div.post-top
-              div.post-info
-                span.date #{cPost.date} by #{cPost.by}
-                span.tags
-                - for (var i in cPost.tags) {
-                  ||
-                  span #{tags[i]}
-                - }
-             a(href=cPost.url).post-title
-               h1 #{title=cPost.title}
-          div.post-content.markdown !{content}
-          div.post-bottom-shadow
-          div.post-bottom
-          - }
-        div.pagination
-        - if (data.page.previous) {
-            a.page.prev(href=config.blog.path + '/page/' + data.page.previous) « Previous page
-        - }
-        - if (data.page.next) {
-            a.page.prev(href=config.blog.path + '/page/' + data.page.next) Next page »
-        - }
-        - } else {
-        div.content= data.page.content
-        - } else {
-        div.top-header
-          a(href=config.blog.path)
-            img.rounded(src="/images/me-s.png")
-               h1= config.site.title
-        div.container
-          div.content.single-post
-            h1.post-title= data.post.title
-            p.post-date
-                i.fa.fa-calendar Posted on #{data.post.date} by
-                a(href="/")= data.post.by
-            - if (data.post.tags.length) {
-            p.post-tags
-              i.fa.fa-tags Tagged as:
-              - for (var i in data.post.tags) {
-              -   var cTag = data.post.tags[i];
-              span.tag.tag-#{cTag}= cTag
-                span.separator
-              - }
-            - }
-            div.markdown !{data.post.content}
-            div.blog-feedback
-              p.blog-feedback-header Have feedback on this post? Let
-                a(href='https://twitter.com/intent/tweet?text=@' + config.options.social + '%20&amp;related=' + config.options.social + '&url=' + data.post.fullUrl + ' target="blank">@' + config.options.social)
-                know on Twitter.
-              p.blog-feedback-description
-                Have any questions or suggestions?
-                a(href="/contact") Contact me
-                Found a bug?
-                a(href="https://github.com/Bloggify/Bloggify/issues/new") Report it now
-      - }
-    div.footer.text-center &copy; 2014 • #{config.site.title} - Created with JavaScript and
-      i.fa.fa-heart
-      from Romania. Powered by
-      a(href="http://bloggify.github.com") Bloggify
-      h1.text-center.social
-        a(href="http://github.com/#{config.user.name}", target="blank")
-          i.fa.fa-github-alt
-        a(href="http://bitbucket.com/#{config.user.name}", target="blank")
-          i.fa.fa-bitbucket
-        a(href="http://twitter.com/#{config.user.name}", target="blank")
-          i.fa.fa-twitter
-        a(href="http://youtube.com/#{config.user.name}", target="blank")
-          i.fa.fa-youtube
+    - // Article
+    - if (type === "article") {
+      include article.jade
+    - // Blog
+    - } else if (type === "blog") {
+      include blog.jade
+    - // Other pages
+    - } else {
+      include page.jade
+    - }
+
+    include footer.jade
     script InstantClick.init()
