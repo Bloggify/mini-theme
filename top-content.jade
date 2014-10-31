@@ -9,6 +9,6 @@ div.header
     -   var cPage = data.menu.pages[i];
     -   var classes = "page" + (cPage.label === data.menu.active.label ? " active" : "");
     li(class=classes)
-        a(href=cPage.url)= cPage.label
+        a(href=cPage.path)= cPage.label
     - }
   - }
