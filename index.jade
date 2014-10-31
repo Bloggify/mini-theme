@@ -2,7 +2,8 @@
 - config.options = config.options || {};
 - config.options.customJS = config.customJS || [];
 - config.options.customCSS = config.customCSS || [];
-- config.analytics = {};
+- config.analytics = config.analytics || {};
+
 - config.blog = config.blog || {};
 - config.site = config.site || {};
 - config.user = config.user || {};
@@ -18,8 +19,6 @@
 - data.posts = data.posts || [{ tags: ["tag1", "tag2"] }];
 - data.page = data.page || {};
 
-- type = "page";
-
 doctype html
 html(lang="en")
   include head.jade
@@ -31,7 +30,7 @@ html(lang="en")
     - } else if (type === "blog") {
       include blog.jade
     - // Other pages
-    - } else {
+    - } else if (type === "sitePage") {
       include page.jade
     - }
 
