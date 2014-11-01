@@ -1,3 +1,4 @@
+- var Moment = require("moment")
 .container
   include top-content.jade
   .content
@@ -6,7 +7,8 @@
     -  var tags = (cPost.tags = cPost.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
     div(class="post " + tags)
       .post-info
-        span.date #{cPost.date} by #{cPost.by}
+        - var displayDate = Moment(cPost.date).format("dddd, MMMM D YYYY");
+        span.date #{displayDate} by #{cPost.by}
         - if (cPost.tags.length) {
         span.tags
           - for (var i in cPost.tags) {
@@ -16,7 +18,7 @@
         - }
       a(href=cPost.url).post-title
          h1 #{cPost.title}
-      div.post-content.markdown !{content}
+      div.post-content.markdown !{cPost.markdown}
       div.post-bottom-shadow
       div.post-bottom
     - }
