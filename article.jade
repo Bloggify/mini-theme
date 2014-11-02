@@ -1,3 +1,4 @@
+- var Moment = require("moment")
 .top-header
   a(href=config.blog.path)
     img.rounded(src="/images/me-s.png")
@@ -9,8 +10,9 @@
     p.post-date
       i.fa.fa-calendar
       = " "
-      | Posted on #{data.post.date} by
-      = " "
+      - var displayDate = Moment(data.post.date).format("dddd, MMMM D YYYY");
+      | Posted on #{displayDate}
+      = " by "
       a(href="/")= data.post.by
       - if (data.post.tags.length) {
         p.post-tags
