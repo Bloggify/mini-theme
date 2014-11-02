@@ -273,10 +273,6 @@ li.page.active a {
 
 /* pagination */
 div.pagination {
-    margin: 0 auto;
-    max-width: 740px;
-    padding: 10px 0 55px 0;
-    font-weight: bold;
     text-align: center;
 
 }
