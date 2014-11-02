@@ -7,26 +7,42 @@
   .content.single-post
     h1.post-title= data.post.title
     p.post-date
-      i.fa.fa-calendar Posted on #{data.post.date} by
+      i.fa.fa-calendar
+      = " "
+      | Posted on #{data.post.date} by
+      = " "
       a(href="/")= data.post.by
       - if (data.post.tags.length) {
         p.post-tags
           i.fa.fa-tags
+          = " "
           | Tagged as:
+          = " "
           - for (var i in data.post.tags) {
           -   var cTag = data.post.tags[i];
+          -   if (i != data.post.tags.length - 1) {
+          -     cTag += ",";
+          -   }
           span.tag= cTag
-          span.separator
+            = " "
           - }
       - }
       div.markdown !{data.post.markdown}
       div.blog-feedback
         p.blog-feedback-header Have feedback on this post? Let
-          a(href='https://twitter.com/intent/tweet?text=@' + config.options.social + '%20&amp;related=' + config.options.social + '&url=' + data.post.fullUrl + ' target="blank">@' + config.options.social)
+          = " "
+          - data.post.fullUrl = "http://" + lien.req.headers.host + data.post.url;
+          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.options.social + "%20&amp;related=" + config.options.social + "&url=" + data.post.fullUrl;
+          a(href=socialLink, target="blank")
+            | @#{config.options.social}
+          = " "
           know on Twitter.
         p.blog-feedback-description
-          Have any questions or suggestions?
+          | Have any questions or suggestions?
+          = " "
           a(href="/contact") Contact me
-          Found a bug?
+          = " "
+          | Found a bug?
+          = " "
           a(href="https://github.com/Bloggify/Bloggify/issues/new") Report it now
   include footer.jade
