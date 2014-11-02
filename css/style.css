@@ -186,7 +186,7 @@ div.post-bottom {
 }
 
 .content.single-post {
-    margin: 6.505em auto 4.505em;
+    margin: 6.505em auto 2.505em;
     max-width: 740px;
 }
 
@@ -222,6 +222,7 @@ div.blog-feedback {
     border-radius: 4px;
     border: 1px solid #aaa;
     box-shadow: 0 6px 6px -6px black;
+    margin-top: 2em;
 }
 .blog-feedback p {
     margin: 10px 0 !important;
