@@ -26,9 +26,15 @@
     - }
     .pagination
       - if (data.page.previous) {
-      a.page.prev(href=config.blog.path + '/page/' + data.page.previous) « Previous page
+      a.page.prev(href=config.blog.path + '/page/' + data.page.previous)
+        i.fa.fa-angle-left
+        = " "
+        | Newer posts
       - }
       - if (data.page.next) {
-      a.page.next(href=config.blog.path + '/page/' + data.page.next) Next page »
+      a.page.next(href=config.blog.path + '/page/' + data.page.next)
+        | Older posts
+        = " "
+        i.fa.fa-angle-right
       - }
   include footer.jade
