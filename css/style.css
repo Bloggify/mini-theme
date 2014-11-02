@@ -92,7 +92,7 @@ h1.social a:last-of-type {
 
 .header h2,
 .post .post-bottom,
-.post .post-top {
+.post .post-info {
     color: #939393;
     font-size: .8em;
     font-weight: 900;
@@ -101,6 +101,7 @@ h1.social a:last-of-type {
 
 .post .post-info {
     text-transform: uppercase;
+    margin-bottom: 2em;
 }
 
 img.rounded {
@@ -146,8 +147,11 @@ div.top-header {
 
 /* posts */
 div.post a.post-title h1 {
-    margin: 70px 0 -10px 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.7em;
 }
+
 div.post {
     padding-bottom: 1em;
     margin: 4em auto 5em auto;

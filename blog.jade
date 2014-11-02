@@ -6,9 +6,13 @@
     -  var cPost = data.posts[i];
     -  var tags = (cPost.tags = cPost.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
     div(class="post " + tags)
+      a(href=cPost.url).post-title
+        h1 #{cPost.title}
       .post-info
         - var displayDate = Moment(cPost.date).format("dddd, MMMM D YYYY");
-        span.date #{displayDate} by #{cPost.by}
+        span.date #{displayDate}
+        = " "
+        | by #{cPost.by}
         - if (cPost.tags.length) {
         span.tags
           - for (var i in cPost.tags) {
@@ -16,8 +20,6 @@
           span= cPost.tags[i]
           - }
         - }
-      a(href=cPost.url).post-title
-         h1 #{cPost.title}
       div.post-content.markdown !{cPost.markdown}
       div.post-bottom-shadow
       div.post-bottom
