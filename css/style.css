@@ -324,7 +324,7 @@ div.footer {
     width: 100%;
     padding: 10px;
     border: 3px solid #2980b9;
-    margin-left: -20px;
+    margin-bottom: 20px;
 }
 
 .contact-form textarea {
