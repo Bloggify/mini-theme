@@ -154,7 +154,7 @@ div.post a.post-title h1 {
 
 div.post {
     padding-bottom: 1em;
-    margin: 4em auto 5em auto;
+    margin: 1em auto 5em auto;
     max-width: 750px;
     position: relative;
 }
@@ -185,8 +185,8 @@ div.post-bottom {
 }
 
 .content {
-    padding-bottom: 8px;
     font-family: 'Roboto', serif;
+    padding: 2em 0;
 }
 
 .content.single-post {
