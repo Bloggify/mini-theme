@@ -219,6 +219,20 @@ h1.post-title {
     margin-bottom: 0px;
 }
 
+/* content */
+/*.markdown img {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+.markdown img.loaded {
+    opacity: 1;
+}*/
+
 /* feedback */
 div.blog-feedback {
     background: #F0F0F0;
