@@ -274,7 +274,7 @@ li.page.active a {
 /* pagination */
 div.pagination {
     text-align: center;
-
+    margin-bottom: 3em;
 }
 
 div.pagination > a.page.prev {
