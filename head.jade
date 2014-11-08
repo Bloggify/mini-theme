@@ -3,7 +3,7 @@ head
   meta(name="viewport", content="width=device-width,initial-scale=1.0")
   link(rel="stylesheet", href=config.theme + "/css/style.css")
   link(rel="icon", href="/favicon.ico")
-  title= data.title
+  title #{data.title} | #{config.site.title}
   - for (var i = 0; i < config.options.customCSS.length; ++i) {
   link(rel="stylesheet", href=config.options.customCSS[i])
   - }
