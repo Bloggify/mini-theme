@@ -7,8 +7,8 @@ div.header
   ul.pages.text-center
     - for (var i in data.menu.pages) {
     -   var cPage = data.menu.pages[i];
-    -   var classes = "page" + (cPage.label === data.menu.active.label ? " active" : "");
+    -   var classes = "page" + (cPage.slug === data.menu.active.slug ? " active" : "");
     li(class=classes)
-        a(href=cPage.path)= cPage.label
+        a(href=cPage.path)= cPage.title
     - }
   - }
