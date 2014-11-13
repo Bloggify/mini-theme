@@ -5,36 +5,36 @@
     h1= config.site.title
 
 .container
-  .content.single-post
-    h1.post-title= data.post.title
-    p.post-date
+  .content.single-article
+    h1.article-title= data.article.title
+    p.article-date
       i.fa.fa-calendar
       = " "
-      - var displayDate = Moment(data.post.date).format("dddd, MMMM D YYYY");
-      | Posted on #{displayDate}
+      - var displayDate = Moment(data.article.date).format("dddd, MMMM D YYYY");
+      | articleed on #{displayDate}
       = " by "
-      a(href="/")= data.post.by
-      - if (data.post.tags.length) {
-        p.post-tags
+      a(href="/")= data.article.by
+      - if (data.article.tags.length) {
+        p.article-tags
           i.fa.fa-tags
           = " "
           | Tagged as:
           = " "
-          - for (var i in data.post.tags) {
-          -   var cTag = data.post.tags[i];
-          -   if (i != data.post.tags.length - 1) {
+          - for (var i in data.article.tags) {
+          -   var cTag = data.article.tags[i];
+          -   if (i != data.article.tags.length - 1) {
           -     cTag += ",";
           -   }
           span.tag= cTag
             = " "
           - }
       - }
-      div.markdown !{data.post.content}
+      div.markdown !{data.article.content}
       div.blog-feedback
-        p.blog-feedback-header Have feedback on this post? Let
+        p.blog-feedback-header Have feedback on this article? Let
           = " "
-          - data.post.fullUrl = "http://" + lien.req.headers.host + data.post.url;
-          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.options.social + "%20&amp;related=" + config.options.social + "&url=" + data.post.fullUrl;
+          - data.article.fullUrl = "http://" + lien.req.headers.host + data.article.url;
+          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.options.social + "%20&amp;related=" + config.options.social + "&url=" + data.article.fullUrl;
           a(href=socialLink, target="blank")
             | @#{config.options.social}
           = " "
