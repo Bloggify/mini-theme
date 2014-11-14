@@ -327,6 +327,13 @@ div.footer {
     margin-bottom: 20px;
 }
 
+.contact-form input[type="text"].error,
+.contact-form input[type="email"].error,
+.contact-form input[type="submit"].error,
+.contact-form textarea.error {
+    border-color: #c0392b;
+}
+
 .contact-form textarea {
     resize: vertical;
     height: 200px !important;
