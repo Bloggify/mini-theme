@@ -1,0 +1,40 @@
+- var Moment = require("moment")
+.container
+  include top-content.jade
+  .content
+    - for (var i in data.articles) {
+    -  var cArticle = data.articles[i];
+    -  var tags = (cArticle.tags = cArticle.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
+    div(class="article " + tags)
+      a(href=cArticle.url).article-title
+        h1 #{cArticle.title}
+      .article-info
+        - var displayDate = Moment(cArticle.date).format("dddd, MMMM D YYYY");
+        span.date #{displayDate}
+        = " "
+        | by #{cArticle.by}
+        - if (cArticle.tags.length) {
+        span.tags
+          - for (var i in cArticle.tags) {
+          = " | "
+          span= cArticle.tags[i]
+          - }
+        - }
+      div.article-content.markdown !{cArticle.content}
+      div.article-bottom-shadow
+      a(href=cArticle.url).read-more.bottom Read more »
+    - }
+    .pagination
+      - if (data.page.previous) {
+      a.page.prev(href=config.blog.path + '/page/' + data.page.previous)
+        i.fa.fa-angle-left
+        = " "
+        | Newer articles
+      - }
+      - if (data.page.next) {
+      a.page.next(href=config.blog.path + '/page/' + data.page.next)
+        | Older articles
+        = " "
+        i.fa.fa-angle-right
+      - }
+  include footer.jade

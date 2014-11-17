@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/BloggifyThemes/Default/issues"
   },
-  "homepage": "https://github.com/BloggifyThemes/Default"
+  "homepage": "https://github.com/BloggifyThemes/Default",
+  "bloggify": {
+    "errors": {
+      "403": "/errors/403.html",
+      "404": "/errors/404.html",
+      "500": "/errors/500.html"
+    },
+    "main": "index.jade"
+  }
 }

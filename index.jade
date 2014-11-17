@@ -1,0 +1,37 @@
+- config = config || {};
+- config.options = config.options || {};
+- config.options.customJS = config.options.customJS || [];
+- config.options.customCSS = config.options.customCSS || [];
+- config.analytics = config.analytics || {};
+
+- config.blog = config.blog || {};
+- config.site = config.site || {};
+- config.user = config.user || {};
+
+- data = data || {};
+- data.article = data.article || {};
+- data.article.tags = data.article.tags || [];
+
+- data.menu = data.menu || {};
+- data.menu.active = data.menu.active || {};
+- data.menu.pages = data.menu.pages || [];
+
+- data.articles = data.articles || [];
+- data.page = data.page || {};
+
+doctype html
+html(lang="en")
+  include head.jade
+  body
+    - // Article
+    - if (type === "article") {
+      include article.jade
+    - // Blog
+    - } else if (type === "blog") {
+      include blog.jade
+    - // Other pages
+    - } else if (type === "sitePage") {
+      include page.jade
+    - }
+    include scripts.jade
+    script InstantClick.init()
