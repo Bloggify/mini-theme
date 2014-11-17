@@ -7,11 +7,19 @@ div.footer.text-center &copy; 2014 • #{config.site.title} - Created with JavaS
   a(href="http://bloggify.github.com") Bloggify
   = "."
   h1.text-center.social
-    a(href="http://github.com/#{config.user.name}", target="blank")
+    - if (config.themeData.social.github) {
+    a(href="http://github.com/#{config.themeData.social.github}", target="blank")
       i.fa.fa-github-alt
-    a(href="http://bitbucket.com/#{config.user.name}", target="blank")
+    - }
+    - if (config.themeData.social.bitbucket) {
+    a(href="http://bitbucket.com/#{config.themeData.social.bitbucket}", target="blank")
       i.fa.fa-bitbucket
-    a(href="http://twitter.com/#{config.user.name}", target="blank")
+    - }
+    - if (config.themeData.social.twitter) {
+    a(href="http://twitter.com/#{config.themeData.social.twitter}", target="blank")
       i.fa.fa-twitter
-    a(href="http://youtube.com/#{config.user.name}", target="blank")
+    - }
+    - if (config.themeData.social.youtube) {
+    a(href="http://youtube.com/#{config.themeData.social.youtube}", target="blank")
       i.fa.fa-youtube
+    - }
