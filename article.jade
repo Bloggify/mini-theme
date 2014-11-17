@@ -1,3 +1,4 @@
+- config.themeData.social = config.themeData.social || {};
 - var Moment = require("moment")
 .top-header
   a(href=config.blog.path)
@@ -30,13 +31,15 @@
           - }
       - }
       div.markdown !{data.article.content}
+
+      - if (config.themeData.social.twitter) {
       div.blog-feedback
         p.blog-feedback-header Have feedback on this article? Let
           = " "
           - data.article.fullUrl = "http://" + lien.req.headers.host + data.article.url;
-          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.options.social + "%20&amp;related=" + config.options.social + "&url=" + data.article.fullUrl;
+          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.themeData.social.twitter + "%20&amp;related=" + config.themeData.social.twitter + "&url=" + data.article.fullUrl;
           a(href=socialLink, target="blank")
-            | @#{config.options.social}
+            | @#{config.themeData.social.twitter}
           = " "
           | know on Twitter.
         p.blog-feedback-description
@@ -47,4 +50,5 @@
           | Found a bug?
           = " "
           a(href="https://github.com/Bloggify/Bloggify/issues/new") Report it now
+      - }
   include footer.jade
