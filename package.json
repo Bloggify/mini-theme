@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/BloggifyThemes/Default/issues"
   },
+  "dependencies": {
+    "moment": "2.8.3"
+  },
   "homepage": "https://github.com/BloggifyThemes/Default",
   "bloggify": {
     "errors": {
