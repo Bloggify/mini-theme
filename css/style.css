@@ -183,6 +183,12 @@ div.article-bottom {
     position: absolute;
 }
 
+a.read-more.bottom {
+    float: right;
+    margin-top: -63px;
+    font-weight: 100;
+}
+
 .content {
     font-family: 'Roboto', serif;
     padding: 2em 0;
