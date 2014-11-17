@@ -12,20 +12,20 @@
 /* general */
 body {
     font-family: 'Gentium Book Basic', 'sans-serif';
-    color: #2c3e50;
     margin: 2em 1em;
     background: white;
+    color: #444;
 }
 
 a {
     color: #2980b9;
     text-decoration: none;
     font-weight: bold;
-    -webkit-transition: color 0.2s ease;
-    -moz-transition: color 0.2s ease;
-    -ms-transition: color 0.2s ease;
-    -o-transition: color 0.2s ease;
-    transition: color 0.2s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 a:hover {
@@ -100,7 +100,7 @@ h1.social a:last-of-type {
 .article .article-bottom,
 .article .article-info {
     color: #939393;
-    font-size: .8em;
+    font-size: .7em;
     font-weight: 900;
     font-family: 'Open Sans', 'sans-serif';
     text-transform: uppercase;
@@ -157,7 +157,7 @@ div.article a.article-title h1 {
     margin-top: 65px;
     font-family: "Open Sans", sans-serif;
     margin-bottom: 5px;
-    font-size: 34px;
+    font-size: 28px;
 }
 
 div.article {
@@ -230,8 +230,9 @@ p.article-tags span.separator:after {
 
 h1.article-title {
     margin-bottom: 0px;
-    font-size: 34px;
+    font-size: 28px;
     font-family: "Open Sans", sans-serif;
+    color: #444;
 }
 
 /* content */
@@ -320,6 +321,9 @@ div.pagination > a.page {
     padding: 8px 20px 6px 20px;
     font-weight: 100;
     width: 150px;
+}
+
+div.pagination > a.page:hover {
     box-shadow: 0 0 11px rgba(64, 132, 193, 0.35);
 }
 
