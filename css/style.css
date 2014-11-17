@@ -1,16 +1,17 @@
 /* fonts and tomorrow theme */
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext);
 @import url("./tomorrow.css");
+
 @import url("http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 
 /* markdown css */
 @import url("./markdown.css");
 
 /* general */
 body {
-    font-family: 'Open Sans', 'sans-serif';
+    font-family: 'Gentium Book Basic', 'sans-serif';
     color: #2c3e50;
     margin: 2em 1em;
     background: white;
@@ -29,6 +30,10 @@ a {
 
 a:hover {
     color: #3498db;
+}
+
+.header {
+    font-family: "Open Sans", sans-serif;
 }
 
 .text-center {
@@ -81,6 +86,7 @@ h1.social a:last-of-type {
 .header img {
     width: 120px;
     height: 120px;
+    box-shadow: 0 0 8px rgba(187, 187, 187, 1);
 }
 
 .header h1 {
@@ -97,11 +103,12 @@ h1.social a:last-of-type {
     font-size: .8em;
     font-weight: 900;
     font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
 }
 
 .article .article-info {
     text-transform: uppercase;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 img.rounded {
@@ -113,13 +120,13 @@ img.rounded {
     float: left;
     margin: 0 1.618em 0 0;
     max-height: 35px;
-
 }
 .top-header h1 {
     font-size: 1em;
     float: left;
     margin: 0;
     line-height: 2.2;
+    font-family: "Open Sans", sans-serif;
 }
 div.top-header {
 }
@@ -147,9 +154,10 @@ div.top-header {
 
 /* articles */
 div.article a.article-title h1 {
-    margin: 0;
+    margin-top: 65px;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.7em;
+    margin-bottom: 5px;
+    font-size: 34px;
 }
 
 div.article {
@@ -190,7 +198,6 @@ a.read-more.bottom {
 }
 
 .content {
-    font-family: 'Roboto', serif;
     padding: 2em 0;
 }
 
@@ -224,6 +231,7 @@ p.article-tags span.separator:after {
 h1.article-title {
     margin-bottom: 0px;
     font-size: 34px;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* content */
@@ -267,7 +275,7 @@ p.blog-feedback-description {
 .contact-form input,
 .contact-form textarea,
 p {
-    font-family: 'Roboto', serif;
+    font-family: 'Gentium Book Basic', serif;
     font-size: 20px;
 }
 
@@ -277,6 +285,7 @@ ul.pages {
     border-bottom: 5px solid #dddddd;
     border-top: 5px solid #dddddd;
     padding: 10px 0;
+    margin-top: 4em;
 }
 
 li.page {
@@ -308,9 +317,10 @@ div.pagination > a.page.next {
 div.pagination > a.page {
     border: 1px solid;
     border-radius: 50px;
-    padding: 5px 20px 6px 20px;
+    padding: 8px 20px 6px 20px;
     font-weight: 100;
     width: 150px;
+    box-shadow: 0 0 11px rgba(64, 132, 193, 0.35);
 }
 
 
@@ -367,7 +377,7 @@ div.message-box {
     padding: 12px;
     border-bottom: 4px solid;
     color: white;
-    font-family: "Roboto";
+    font-family: "Gentium Book Basic";
     text-align: center;
 }
 
