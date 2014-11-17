@@ -11,7 +11,7 @@
       i.fa.fa-calendar
       = " "
       - var displayDate = Moment(data.article.date).format("dddd, MMMM D YYYY");
-      | articleed on #{displayDate}
+      | Posted on #{displayDate}
       = " by "
       a(href="/")= data.article.by
       - if (data.article.tags.length) {
