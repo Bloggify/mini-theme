@@ -30,6 +30,6 @@
       "404": "/errors/404.html",
       "500": "/errors/500.html"
     },
-    "main": "index.jade"
+    "main": "views/index.jade"
   }
 }
