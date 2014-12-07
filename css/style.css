@@ -257,15 +257,26 @@ h1.article-title {
 
 /* feedback */
 div.blog-feedback {
-    background: #F0F0F0;
+    background: rgba(240, 240, 240, 0.24);
     padding: 1px 21px;
     border-radius: 4px;
-    border: 1px solid #aaa;
-    box-shadow: 0 6px 6px -6px black;
+    border: 1px solid rgba(170, 170, 170, 0.26);
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.17);
     margin-top: 2em;
 }
+.blog-feedback p.blog-feedback-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.blog-feedback p.blog-feedback-description {
+    margin-bottom: 10px;
+    margin-top: 7px;
+}
+
 .blog-feedback p {
-    margin: 10px 0 !important;
     font-weight: normal;
 }
 p.blog-feedback-description {
