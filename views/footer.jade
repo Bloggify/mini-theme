@@ -1,11 +1,21 @@
-div.footer.text-center &copy; 2014 • #{config.site.title} - Created with JavaScript and
+div.footer.text-center &copy; 2015 • #{config.site.title} - Created with JavaScript and
   = " "
   i.fa.fa-heart.pulse
   = " "
-  from Romania. Powered by
+  | from Romania. Powered by
   = " "
   a(href="http://bloggify.github.com") Bloggify
   = "."
+  br
+  | Sponsored by
+  = " "
+  a(href="http://brightbox.com/") Brightbox
+  = " "
+  | and
+  = " "
+  a(href="http://tchost.org/") TCHost
+  |.
+
   h1.text-center.social
     - if (config.themeData.social.github) {
     a(href="http://github.com/#{config.themeData.social.github}", target="blank")
