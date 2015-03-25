@@ -1,14 +1,14 @@
 {
-  "name": "bloggify-default-theme",
+  "name": "bloggify-mini-theme",
   "version": "1.0.0",
-  "description": "Default theme for Bloggify",
+  "description": "A minimalist theme for Bloggify",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:BloggifyThemes/Default.git"
+    "url": "git@github.com:Bloggify/MiniTheme.git"
   },
   "keywords": [
     "bloggify",
@@ -18,12 +18,12 @@
   "author": "Ionică Bizău <bizauionica@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BloggifyThemes/Default/issues"
+    "url": "https://github.com/Bloggify/MiniTheme/issues"
   },
   "dependencies": {
     "moment": "2.8.3"
   },
-  "homepage": "https://github.com/BloggifyThemes/Default",
+  "homepage": "https://github.com/Bloggify/MiniTheme",
   "bloggify": {
     "errors": {
       "403": "/errors/403.html",
