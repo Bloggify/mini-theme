@@ -1,10 +1,10 @@
 header.bg-black
   .container.text-center
-    h1.monospace.title $ ShareTerm.me
-    p.description
-      | Share terminal sessions with your friends.
+    h1.monospace.title $ !{config.site.title}
+    p.description !{config.site.description}
     p.installation.monospace
       span.dolar.no-select $
+        = " "
       span.command npm install share-term -g
 - if (data.menu.pages.length) {
 menu

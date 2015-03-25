@@ -1,28 +1,27 @@
 - var Moment = require(config.pathContent + config.theme + "/node_modules/moment")
+include top-content.jade
 .container
-  include top-content.jade
   .content
     - for (var i in data.articles) {
     -  var cArticle = data.articles[i];
     -  var tags = (cArticle.tags = cArticle.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
     div(class="article " + tags)
-      a(href=cArticle.url).article-title
-        h1 #{cArticle.title}
-      .article-info
-        - var displayDate = Moment(cArticle.date).format("dddd, MMMM D YYYY");
+      h1.article-title
+        a(href=cArticle.url) #{cArticle.title}
+      .article-info.text-center
+        | By #{cArticle.by}
+        = " • "
+        - var displayDate = Moment(cArticle.date).format("MMMM D, YYYY");
         span.date #{displayDate}
+      div.article-content.markdown !{cArticle.content}
+      - if (cArticle.tags.length) {
+        i.fa.fa-tags
         = " "
-        | by #{cArticle.by}
-        - if (cArticle.tags.length) {
         span.tags
           - for (var i in cArticle.tags) {
-          = " | "
           span= cArticle.tags[i]
           - }
-        - }
-      div.article-content.markdown !{cArticle.content}
-      div.article-bottom-shadow
-      a(href=cArticle.url).read-more.bottom Read more »
+      - }
     - }
     .pagination
       - if (data.page.previous) {
@@ -31,10 +30,15 @@
         = " "
         | Newer articles
       - }
+      - if (data.page.previous || data.page.next) {
+      span.current-page
+        | Page #{data.page.active} of #{data.page.count}
+      - }
       - if (data.page.next) {
       a.page.next(href=config.blog.path + '/page/' + data.page.next)
         | Older articles
         = " "
         i.fa.fa-angle-right
       - }
-  include footer.jade
+
+include footer.jade
