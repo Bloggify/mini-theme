@@ -1,36 +1,16 @@
 - config.themeData.social = config.themeData.social || {};
-div.footer.text-center &copy; 2015 • #{config.site.title} - Created with JavaScript and
-  = " "
-  i.fa.fa-heart.pulse
-  = " "
-  | from Romania. Powered by
-  = " "
-  a(href="http://bloggify.github.com") Bloggify
-  = "."
-  br
-  | Sponsored by
-  = " "
-  a(href="http://brightbox.com/") Brightbox
-  = " "
-  | and
-  = " "
-  a(href="http://tchost.org/") TCHost
-  |.
-
-  h1.text-center.social
-    - if (config.themeData.social.github) {
-    a(href="http://github.com/#{config.themeData.social.github}", target="blank")
-      i.fa.fa-github-alt
-    - }
-    - if (config.themeData.social.bitbucket) {
-    a(href="http://bitbucket.com/#{config.themeData.social.bitbucket}", target="blank")
-      i.fa.fa-bitbucket
-    - }
-    - if (config.themeData.social.twitter) {
-    a(href="http://twitter.com/#{config.themeData.social.twitter}", target="blank")
-      i.fa.fa-twitter
-    - }
-    - if (config.themeData.social.youtube) {
-    a(href="http://youtube.com/#{config.themeData.social.youtube}", target="blank")
-      i.fa.fa-youtube
-    - }
+footer.pad-xl.bg-black
+  .container.text-center
+    | &copy; #{new Date().getFullYear()}
+    = " "
+    strong #{config.site.title}
+    = " | "
+    | Created
+    = " "
+    | with
+    = " "
+    span.fa.fa-heart
+    = " "
+    | by
+    = " "
+    a(href="http://ionicabizau.net") Ionică Bizău
