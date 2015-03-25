@@ -1,14 +1,17 @@
-div.header
-  div.text-center
-    img(src="/images/logo.png").rounded
-    h1 !{config.site.title}
-    h2 !{config.site.description}
-  - if (data.menu.pages.length) {
-  ul.pages.text-center
+header.bg-black
+  .container.text-center
+    h1.monospace.title $ ShareTerm.me
+    p.description
+      | Share terminal sessions with your friends.
+    p.installation.monospace
+      span.dolar.no-select $
+      span.command npm install share-term -g
+- if (data.menu.pages.length) {
+menu
+  .container.text-center
     - for (var i in data.menu.pages) {
     -   var cPage = data.menu.pages[i];
     -   var classes = "page" + (cPage.slug === data.menu.active.slug ? " active" : "");
-    li(class=classes)
-        a(href=cPage.path)= cPage.title
+    a(href=cPage.path, class=classes)= cPage.title
     - }
-  - }
+- }
