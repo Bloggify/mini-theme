@@ -178,7 +178,7 @@ nav > ul > li {
 }
 
 menu a {
-    background: rgb(241, 196, 15);
+    background: #2ecc71;
     padding: 10px 25px;
     color: white !important;
 }
@@ -213,7 +213,7 @@ menu a.active {
 .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 3px solid #2980b9;
+    border: 3px solid #34495E;
     margin-bottom: 20px;
 }
 
@@ -278,12 +278,9 @@ h1.article-title {
     text-align: center;
 }
 
-h1.article-title a {
-    color: #303030;
-}
-
+h1.article-title a,
 h1.article-title a:hover {
-    color: #303030;
+    color: #303030 !important;
 }
 
 .article p {
@@ -340,8 +337,13 @@ span.current-page {
     margin-right: 10px;
 }
 
+.content a,
+footer a {
+    color: #2ecc71 !important;
+}
 .content a:hover {
-    color: black !important;
+    color: #34495e !important;
+    text-decoration: underline;
 }
 
 .article .social a {
