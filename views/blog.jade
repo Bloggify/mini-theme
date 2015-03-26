@@ -5,6 +5,7 @@ include top-content.jade
     - for (var i in data.articles) {
     -  var cArticle = data.articles[i];
     -  var tags = (cArticle.tags = cArticle.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
+    -  cArticle.fullUrl = "http://" + lien.req.headers.host + cArticle.url;
     div(class="article " + tags)
       h1.article-title
         a(href=cArticle.url) #{cArticle.title}
@@ -15,13 +16,21 @@ include top-content.jade
         span.date #{displayDate}
       div.article-content.markdown !{cArticle.content}
       - if (cArticle.tags.length) {
-        i.fa.fa-tags
-        = " "
-        span.tags
+        span.tags.pull-left
+          i.fa.fa-tags
+          = " "
           - for (var i in cArticle.tags) {
           span= cArticle.tags[i]
           - }
       - }
+        span.social.pull-right
+          - var fullUrl = cArticle.fullUrl;
+          a.twitter(href="http://twitter.com/intent/tweet?text=" + encodeURIComponent(cArticle.title) + "&url=" + fullUrl)
+            i.fa.fa-twitter
+          a.facebook(href="https://www.facebook.com/sharer/sharer.php?u=" + fullUrl)
+            i.fa.fa-facebook
+          a.gplus(href="https://plus.google.com/share?url=" + fullUrl)
+            i.fa.fa-google-plus
     - }
     .pagination
       - if (data.page.previous) {
