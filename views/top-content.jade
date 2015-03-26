@@ -1,6 +1,7 @@
 header.bg-black
   .container.text-center
-    h1.monospace.title $ !{config.site.title}
+    - var headingTitle = config.themeData.headingTitle || config.site.title;
+    h1.monospace.title !{headingTitle}
     p.description !{config.site.description}
     p.installation.monospace
       span.dolar.no-select $
