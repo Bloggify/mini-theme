@@ -343,3 +343,9 @@ span.current-page {
 .content a:hover {
     color: black !important;
 }
+
+.article .social a {
+    color: rgb(163, 163, 163);
+    margin-left: 5px;
+    padding: 7px;
+}
