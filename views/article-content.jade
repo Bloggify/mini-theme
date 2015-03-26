@@ -1,6 +1,6 @@
 -  var tags = (cArticle.tags = cArticle.tags || []).map(function (c) { return "tag-" + c; }).join(" ");
 -  cArticle.fullUrl = "http://" + lien.req.headers.host + cArticle.url;
-div(class="article " + tags)
+div(class="content article " + tags)
   h1.article-title
     a(href=cArticle.url) #{cArticle.title}
   .article-info.text-center
