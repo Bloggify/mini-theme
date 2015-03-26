@@ -267,7 +267,7 @@ div.message-box {
 
 .hide { display: none; }
 
-.article {
+.article, .single-article {
     background: #FEFEFE;
     padding: 35px;
     margin-bottom: 35px;
@@ -348,4 +348,41 @@ span.current-page {
     color: rgb(163, 163, 163);
     margin-left: 5px;
     padding: 7px;
+}
+
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 3.631em;
+    padding: 0.5em 2.618em;
+    color: #fff;
+    opacity: 0.97;
+    filter: alpha(opacity=@opacity * 100);
+    z-index: 9999;
+}
+
+.top-header img {
+  float: left;
+  margin: 0 1.618em 0 0;
+  max-height: 35px;
+}
+
+.top-header h1 {
+  font-size: 1em;
+  float: left;
+  margin: 0;
+  line-height: 2.2;
+}
+
+.single-article-wrapper {
+    padding-top: 80px;
+}
+
+article .container {
+    background: white;
+    padding: 45px;
+    margin-bottom: 45px;
+    border-radius: 4px;
 }

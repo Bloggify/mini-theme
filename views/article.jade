@@ -1,54 +1,13 @@
 - config.themeData.social = config.themeData.social || {};
 - var Moment = require(config.pathContent + config.theme + "/node_modules/moment")
-.top-header
+.top-header.bg-black
   a(href=config.blog.path)
     img.rounded(src="/images/me-s.png")
     h1= config.site.title
 
 .container
-  .content.single-article
-    h1.article-title= data.article.title
-    p.article-date
-      i.fa.fa-calendar
-      = " "
-      - var displayDate = Moment(data.article.date).format("dddd, MMMM D YYYY");
-      | Posted on #{displayDate}
-      = " by "
-      a(href="/")= data.article.by
-      - if (data.article.tags.length) {
-        p.article-tags
-          i.fa.fa-tags
-          = " "
-          | Tagged as:
-          = " "
-          - for (var i in data.article.tags) {
-          -   var cTag = data.article.tags[i];
-          -   if (i != data.article.tags.length - 1) {
-          -     cTag += ",";
-          -   }
-          span.tag= cTag
-            = " "
-          - }
-      - }
-      div.markdown !{data.article.content}
+  .single-article-wrapper
+    - var cArticle = data.article;
+    include article-content
 
-      - if (config.themeData.social.twitter) {
-      div.blog-feedback
-        p.blog-feedback-header Have feedback on this article? Let
-          = " "
-          - data.article.fullUrl = "http://" + lien.req.headers.host + data.article.url;
-          - var socialLink = "https://twitter.com/intent/tweet?text=@" + config.themeData.social.twitter + "%20&amp;related=" + config.themeData.social.twitter + "&url=" + data.article.fullUrl;
-          a(href=socialLink, target="blank")
-            | @#{config.themeData.social.twitter}
-          = " "
-          | know on Twitter.
-        p.blog-feedback-description
-          | Have any questions or suggestions?
-          = " "
-          a(href="/contact") Contact me.
-          = " "
-          | Found a bug?
-          = " "
-          a(href="https://github.com/Bloggify/Bloggify/issues/new") Report it now
-      - }
-  include footer.jade
+include footer.jade
