@@ -5,9 +5,13 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/caiuss/1.0.2/caiuss.min.css");
 
 body {
-    font-family: 'Ubuntu', sans-serif;
     background-color: #EBEBEB;
 }
+
+button, body, input, textarea {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 
 .pull-left { float: left; }
 .pull-right { float: right; }
@@ -229,6 +233,12 @@ menu a.active {
     height: 200px !important;
 }
 
+.contact-form textarea,
+.contact-form input {
+    margin-top: 0.6em;
+    font-size: 1.3em;
+}
+
 .contact-form table {
     width: 100%;
 }
@@ -278,6 +288,10 @@ h1.article-title {
     text-align: center;
 }
 
+h1.article-title a:hover {
+    text-decoration: none;
+}
+
 h1.article-title a,
 h1.article-title a:hover {
     color: #303030 !important;
@@ -289,6 +303,9 @@ h1.article-title a:hover {
 
 .article-info {
     color: rgb(163, 163, 163);
+    border-top: 1px solid rgb(228, 228, 228);
+    padding-top: 9px;
+    margin: 9px 220px;
 }
 
 .article {
@@ -322,6 +339,14 @@ h1.article-title a:hover {
 span.current-page {
     background: white;
     padding: 10px;
+}
+
+span.current-page, a.page {
+    border-radius: 4px;
+}
+
+a.page:hover {
+    text-decoration: none !important;
 }
 
 .pagination a.page {
