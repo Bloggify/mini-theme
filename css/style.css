@@ -388,3 +388,12 @@ article .container {
     margin-bottom: 45px;
     border-radius: 4px;
 }
+
+.installation.share-term {
+    background: rgb(247, 247, 247);
+    width: 310px;
+    text-align: left;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid rgb(226, 226, 226);
+}
