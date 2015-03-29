@@ -12,6 +12,9 @@ menu
   .container.text-center
     - for (var i in data.menu.pages) {
     -   var cPage = data.menu.pages[i];
+    -   if (cPage.visible === false) {
+    -       continue;
+    -   }
     -   var classes = "page" + (cPage.slug === data.menu.active.slug ? " active" : "");
     a(href=cPage.path, class=classes)= cPage.title
     - }
