@@ -1,8 +1,8 @@
 {
   "name": "bloggify-mini-theme",
   "version": "1.0.0",
-  "description": "A minimalist theme for Bloggify",
-  "main": "index.js",
+  "description": "Yet another minimalist Bloggify theme.",
+  "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "bloggify",
-    "default",
+    "minimalist",
     "theme"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
