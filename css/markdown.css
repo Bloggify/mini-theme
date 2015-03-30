@@ -27,19 +27,8 @@
   font-weight: bold;
 }
 
-.markdown h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 .markdown img {
   border: 0;
-}
-
-.markdown hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
 }
 
 .markdown pre {
@@ -101,61 +90,6 @@
 .markdown a:focus,
 .markdown a:active {
   text-decoration: underline;
-}
-
-.markdown hr {
-  height: 0;
-  margin: 15px 0;
-  overflow: hidden;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.markdown hr:before {
-  display: table;
-  content: "";
-}
-
-.markdown hr:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.markdown h1 {
-  font-size: 30px;
-}
-
-.markdown h2 {
-  font-size: 21px;
-}
-
-.markdown h3 {
-  font-size: 16px;
-}
-
-.markdown h4 {
-  font-size: 14px;
-}
-
-.markdown h5 {
-  font-size: 12px;
-}
-
-.markdown h6 {
-  font-size: 11px;
 }
 
 .markdown blockquote {
@@ -232,84 +166,6 @@
   outline: none;
 }
 
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  position: relative;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.markdown h1 .octicon-link,
-.markdown h2 .octicon-link,
-.markdown h3 .octicon-link,
-.markdown h4 .octicon-link,
-.markdown h5 .octicon-link,
-.markdown h6 .octicon-link {
-  display: none;
-  color: #000;
-  vertical-align: middle;
-}
-
-.markdown h1:hover .anchor,
-.markdown h2:hover .anchor,
-.markdown h3:hover .anchor,
-.markdown h4:hover .anchor,
-.markdown h5:hover .anchor,
-.markdown h6:hover .anchor {
-  height: 1em;
-  padding-left: 8px;
-  margin-left: -30px;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.markdown h1:hover .anchor .octicon-link,
-.markdown h2:hover .anchor .octicon-link,
-.markdown h3:hover .anchor .octicon-link,
-.markdown h4:hover .anchor .octicon-link,
-.markdown h5:hover .anchor .octicon-link,
-.markdown h6:hover .anchor .octicon-link {
-  display: inline-block;
-}
-
-.markdown h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-
-.markdown h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-
-.markdown h4 {
-  font-size: 1.25em;
-}
-
-.markdown h5 {
-  font-size: 1em;
-}
-
-.markdown h6 {
-  font-size: 1em;
-  color: #777;
-}
-
 .markdown p,
 .markdown blockquote,
 .markdown ul,
@@ -319,14 +175,6 @@
 .markdown pre {
   margin-top: 0;
   margin-bottom: 16px;
-}
-
-.markdown hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
 }
 
 .markdown ul,
