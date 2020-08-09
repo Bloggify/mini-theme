@@ -1,6 +1,6 @@
 {
   "name": "bloggify-mini-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet another minimalist Bloggify theme.",
   "main": "package.json",
   "scripts": {
